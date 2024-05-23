@@ -1,0 +1,96 @@
+﻿@page
+@model TestWebsite.Pages.Index1Model
+@{
+    ViewData[ "Title" ] = "Projects";
+}
+
+<head>
+
+    <style>
+        
+        .dropShadowDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(10px 10px 10px rgba( 0, 0, 0, 0.4 ));
+            margin: 50px;
+        }
+
+        .circleCrop {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .circleCrop img {
+                width: 100%;
+                height: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1>Dunnatello's Portfolio</h1>
+        <h2>Hello, there 🌊</h2>
+        <p>This website contains some of my personal and professional projects with information about what I achieved and learned from each one.</p>
+
+        <h2>GitHub Profile</h2>
+        <div class="dropShadowDiv">
+            <div class="circleCrop">
+                <img src="https://avatars.githubusercontent.com/u/11823777" width="400">
+            </div>
+        </div>
+
+
+        <div class="text-center" style="margin: 25px;">
+
+            <h1><a href="https://github.com/Dunnatello">Dunnatello</a></h1>
+        </div>
+
+        <p>You can find my GitHub profile here if you're interested in seeing my contribution history.</p>
+
+        <h2>🚀 Projects</h2>
+        <p>Here are a few of my published projects:</p>
+
+        <h3> 1. XR Training Simulation for Teacher Education</h3>
+        <div class="dropShadowDiv">
+            <img src="images/XRSimulation Graph.png" width="750">
+        </div>
+
+        <p><i>XR Training Simulation for Teacher Education</i> is a classroom de-escalation training simulation software designed by myself and my other group members for our senior capstone project. This project features advanced animation systems and complex narrative design.</p>
+
+        <h4>📃<a href="https://github.com/Dunnatello/AsteroidCrashers/"> Details</a></h4>
+
+        <h3> 2. Asteroid Crashers</h3>
+        <div class="dropShadowDiv">
+            <img src="images/AsteroidCrashersGraph.png" width="750">
+        </div>
+
+        <p><i>Asteroid Crashers</i> is a game designed by myself along with my other group members for our Secure Software Engineering university course. This project demonstrates how an anti-cheat system can be implemented into a Unity game.</p>
+
+        <h4>🤖<a href="https://github.com/Dunnatello/AsteroidCrashers/"> Repository</a></h4>
+
+
+        <h3> 3. Visions</h3>
+        <div class="dropShadowDiv">
+            <img src="images/Visions%20Graph.png" width="750">
+        </div>
+
+        <p><i>Visions</i> is a game designed by myself and my friend for our Advanced Game & Simulation Development course. This project demonstrates ballistic weapon physics in a endless zombie shooter Unity game.</p>
+
+        <h4>🤖<a href="https://github.com/Dunnatello-DifferentFusion/Visions"> Repository</a></h4>
+
+        <h3> 4. Burn it Up!</h3>
+        <p align="center"><img src="images/BurnItUp%20Graph.png" width="750"></p>
+
+        <p><i>Burn it Up!</i> is a weight loss app designed by myself along with my other group members for our Software Engineering Principles course project. In this project, we implemented a weight loss application in Solar2D/Lua.</p>
+
+        <h4>🤖<a href="https://github.com/Dunnatello/BurnItUp"> Repository</a></h4>
+
+    <h2> 📨 Contact Me</h2>
+    <p>If you would like to reach out to me, you can contact me via email <a href="mailto:dunnatello@dunnatello.com/">here</a>.</p>
+    </div>
+</body>
