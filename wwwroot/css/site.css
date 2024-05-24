@@ -144,15 +144,15 @@ h3 {
     background: rgba( 0, 0, 0, 0.5 );
     padding: 15px;
     border-radius: 15px;
-
+    text-align: center;
 }
 
 .button {
     float: left;
-    background-color: inherit; /* Green */
+    background-color: inherit;
     border: none;
     color: white;
-    margin: 0 0 0 15px;
+    margin: 5px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -163,6 +163,7 @@ h3 {
     transition: background-color 0.3s ease;
     user-select: none;
     vertical-align: middle;
+    box-sizing: border-box;
 }
 .button span {
     cursor: pointer;
@@ -246,16 +247,49 @@ h3 {
     padding: 25px 0 25px 0;
 }
 
+/*
+    
+    For Responsive Layout on Desktop/Mobile
+*/
 
-
+/*
+    Mobile Layout
+*/
 .demoVideo {
-    width: 60vw;
+    width: 90vw;
     height: auto;
 }
 .dropShadowDiv {
     flex-wrap: wrap;
 }
+
+.buttonList {
+    flex-wrap: wrap;
+}
+
+.projectElement img {
+    width: 90vw;
+}
+
+.circleCrop, circleCrop img {
+    width: 50vw;
+    height: 50vw;
+}
+
+/*
+    Desktop Layout
+*/
 @media (min-width: 768px) {
+
+    .circleCrop, circleCrop img { 
+        width: 300px;
+        height: 300px;
+    }
+
+    .projectElement img {
+        width: 40vw;
+    }
+
     .demoVideo {
         width: 30vw;
         height: auto;
@@ -264,4 +298,10 @@ h3 {
     .dropShadowDiv {
         flex-wrap: nowrap;
     }
+
+    .buttonList {
+        flex-wrap: nowrap;
+        margin-bottom: 25px;
+    }
+
 }
