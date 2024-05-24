@@ -4,7 +4,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -21,8 +21,115 @@ html {
     background-color: #212529;
 }
 body {
-    font-size: 22px;
     color: #fff;
     background-color: #282526;
-    margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.dropShadowDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(10px 10px 10px rgba( 0, 0, 0, 0.4 ));
+    margin: 25px;
+}
+.dropShadowDiv video {
+    margin: 10px;
+}
+
+.circleCrop {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.circleCrop:hover {
+    transform: scale(1.05)
+}
+
+.smallProfileCrop {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 15%;
+    filter: drop-shadow(0px 5px 5px rgba( 0, 0, 0, 0.4 ));
+    transition: transform 0.3s ease;
+}
+
+.smallProfileCrop:hover {
+    transform: scale(1.2);
+}
+
+.smallProfileCrop img {
+    width: 100%;
+    height: auto;
+}
+
+.circleCrop img {
+    width: 100%;
+    height: auto;
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0.75em;
+}
+
+.grayTableElement {
+    border-radius: 15px;
+    background-color: #545353;
+    text-align: center;
+    margin-bottom: 50px;
+    filter: drop-shadow(5px 5px 5px rgba( 0, 0, 0, 0.4 ));
+}
+
+.darkgrayTableElement {
+    border-radius: 15px;
+    background-color: #423e40;
+    text-align: center;
+    margin-bottom: 50px;
+    filter: drop-shadow(5px 5px 5px rgba( 0, 0, 0, 0.4 ));
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gitHubProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-image: url( "/images/circuit.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.blackText {
+    color: #fff;
+    filter: drop-shadow(15px 15px 15px rgba( 0, 0, 0, 0.4 ));
+    background: rgba( 0, 0, 0, 0.5 );
+    padding: 15px;
+    border-radius: 15px;
+
 }

@@ -4,53 +4,26 @@
     ViewData[ "Title" ] = "Projects";
 }
 
-<head>
 
-    <style>
-        
-        .dropShadowDiv {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            filter: drop-shadow(10px 10px 10px rgba( 0, 0, 0, 0.4 ));
-            margin: 50px;
-        }
-
-        .circleCrop {
-            width: 400px;
-            height: 400px;
-            overflow: hidden;
-            border-radius: 50%;
-        }
-        .circleCrop img {
-                width: 100%;
-                height: auto;
-        }
-
-    </style>
-
-</head>
-
-<body>
+<body style="margin:0 0;padding: 0">
     <div>
         <h1>Dunnatello's Portfolio</h1>
         <h2>Hello, there 🌊</h2>
         <p>This website contains some of my personal and professional projects with information about what I achieved and learned from each one.</p>
 
-        <h2>GitHub Profile</h2>
-        <div class="dropShadowDiv">
-            <div class="circleCrop">
-                <img src="https://avatars.githubusercontent.com/u/11823777" width="400">
+        <div class="gitHubProfile">
+            <h2 class="blackText">GitHub Profile</h2>
+            <div class="dropShadowDiv">
+                <div class="circleCrop">
+                    <a href="https://github.com/Dunnatello"><img src="https://avatars.githubusercontent.com/u/11823777"></a>
+                </div>
             </div>
+            <h1 class="blackText" align="center">Dunnatello</h1>
+            <p class="blackText">You can view my GitHub profile if you're interested in seeing my contribution history.</p>
+
         </div>
+        
 
-
-        <div class="text-center" style="margin: 25px;">
-
-            <h1><a href="https://github.com/Dunnatello">Dunnatello</a></h1>
-        </div>
-
-        <p>You can find my GitHub profile here if you're interested in seeing my contribution history.</p>
 
         <h2>🚀 Projects</h2>
         <p>Here are a few of my published projects:</p>
@@ -62,7 +35,7 @@
 
         <p><i>XR Training Simulation for Teacher Education</i> is a classroom de-escalation training simulation software designed by myself and my other group members for our senior capstone project. This project features advanced animation systems and complex narrative design.</p>
 
-        <h4>📃<a href="https://github.com/Dunnatello/AsteroidCrashers/"> Details</a></h4>
+        <h4>📃<a href="/Projects/XRSimulation"> Details</a></h4>
 
         <h3> 2. Asteroid Crashers</h3>
         <div class="dropShadowDiv">
