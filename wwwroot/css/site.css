@@ -247,6 +247,9 @@ h3 {
     padding: 25px 0 25px 0;
 }
 
+u1 {
+    list-style-position: inside;
+}
 /*
     
     For Responsive Layout on Desktop/Mobile
