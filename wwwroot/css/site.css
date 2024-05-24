@@ -50,6 +50,12 @@ body {
     transform: scale(1.05)
 }
 
+.navbar-brand, .nav-link {
+    transition: transform 0.3s ease;
+}
+.navbar-brand:hover, .nav-link:hover {
+    transform: scale(1.1)
+}
 .smallProfileCrop {
     margin: 10px;
     width: 60px;
@@ -109,7 +115,7 @@ h3 {
     margin-bottom: 10px;
 }
 
-.gitHubProfile {
+.containerDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,8 +129,12 @@ h3 {
     background-image: url( "/images/circuit.png");
     background-size: cover;
     background-attachment: fixed;
+    background-color: #fff;
     filter: drop-shadow(0px 15px 15px rgba( 0, 0, 0, 0.4 ));
     margin-bottom: 25px;
+
+    overflow: hidden;
+
 }
 
 .blackTransparentBackground {
@@ -151,6 +161,7 @@ h3 {
     filter: drop-shadow(5px 5px 5px rgba( 0, 0, 0, 0.4 ));
     transition: background-color 0.3s ease;
     user-select: none;
+    vertical-align: middle;
 }
 .button span {
     cursor: pointer;
@@ -189,10 +200,47 @@ h3 {
 }
 
 .buttonLink {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: inherit;
 }
 
 .buttonLink:hover {
     color: lightgray;
+}
+
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    z-index: -1;
+    opacity: 1;
+
+    pointer-events: none;
+}
+
+.socialMediaIcon {
+    width: 30px;
+    height: auto;
+    padding: 0;
+    margin: 0 10px 0 0;
+}
+
+.visionsBackground {
+    background-image: url( '/images/Visions Garden.png' );
+}
+
+.burnItUpBackground {
+    background-attachment: revert;
+    background-image: url( '/images/BurnItUpWebsiteGraphic.png' );
+}
+
+.projectElement {
+    padding: 25px 0 25px 0;
 }

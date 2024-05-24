@@ -15,6 +15,18 @@ if ( !app.Environment.IsDevelopment( ) ) {
 app.UseHttpsRedirection( );
 app.UseStaticFiles( );
 
+/*app.Use( async ( context, next ) => {
+	string EnteredPath = context.Request.HttpContext.Request.Path.ToString( ).Remove( 0, 1 );
+	await next( );
+
+	if ( context.Response.StatusCode == 404 ) {
+		context.Request.Path = "/Errors/404";
+		await next( );
+	}
+} );*/
+app.UseStatusCodePagesWithRedirects( "/Errors/Generic" );
+
+app.UseRouting( );
 app.UseRouting( );
 
 app.UseAuthorization( );
@@ -22,3 +34,4 @@ app.UseAuthorization( );
 app.MapRazorPages( );
 
 app.Run( );
+
