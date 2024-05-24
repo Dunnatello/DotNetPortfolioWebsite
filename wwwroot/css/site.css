@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 24px;
 }
 
 @media (min-width: 768px) {
@@ -29,6 +29,7 @@ body {
 
 .dropShadowDiv {
     display: flex;
+    flex-direction:row;
     align-items: center;
     justify-content: center;
     filter: drop-shadow(10px 10px 10px rgba( 0, 0, 0, 0.4 ));
@@ -243,4 +244,24 @@ h3 {
 
 .projectElement {
     padding: 25px 0 25px 0;
+}
+
+
+
+.demoVideo {
+    width: 60vw;
+    height: auto;
+}
+.dropShadowDiv {
+    flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+    .demoVideo {
+        width: 30vw;
+        height: auto;
+    }
+
+    .dropShadowDiv {
+        flex-wrap: nowrap;
+    }
 }
