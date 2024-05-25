@@ -11,9 +11,9 @@ builder.Services.AddRazorPages( );
 builder.Services.AddResponseCaching( );
 
 builder.Services.AddControllers( options => {
-    options.CacheProfiles.Add( "Default60",
+    options.CacheProfiles.Add( "Default600",
         new CacheProfile( ) {
-            Duration = 60
+            Duration = 600
         } );
 } );
 
