@@ -1,7 +1,30 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
+
 var builder = WebApplication.CreateBuilder( args );
 
 // Add services to the container.
 builder.Services.AddRazorPages( );
+
+// Source: https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response?view=aspnetcore-8.0
+builder.Services.AddResponseCaching( );
+
+builder.Services.AddControllers( options => {
+    options.CacheProfiles.Add( "Default60",
+        new CacheProfile( ) {
+            Duration = 60
+        } );
+} );
+
+// Source: https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit?view=aspnetcore-8.0
+builder.Services.AddRateLimiter( _ => _
+    .AddFixedWindowLimiter( policyName: "fixed", options => {
+        options.PermitLimit = 4;
+        options.Window = TimeSpan.FromSeconds( 12 );
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.QueueLimit = 2;
+    } ) );
 
 var app = builder.Build( );
 
@@ -12,21 +35,15 @@ if ( !app.Environment.IsDevelopment( ) ) {
     app.UseHsts( );
 }
 
+// Additional Features to Reduce Bandwidth Impact
+app.UseResponseCaching( );
+app.UseRateLimiter( );
+
 app.UseHttpsRedirection( );
 app.UseStaticFiles( );
 
-/*app.Use( async ( context, next ) => {
-	string EnteredPath = context.Request.HttpContext.Request.Path.ToString( ).Remove( 0, 1 );
-	await next( );
-
-	if ( context.Response.StatusCode == 404 ) {
-		context.Request.Path = "/Errors/404";
-		await next( );
-	}
-} );*/
 app.UseStatusCodePagesWithRedirects( "/Errors/Generic" );
 
-app.UseRouting( );
 app.UseRouting( );
 
 app.UseAuthorization( );
@@ -34,4 +51,3 @@ app.UseAuthorization( );
 app.MapRazorPages( );
 
 app.Run( );
-
