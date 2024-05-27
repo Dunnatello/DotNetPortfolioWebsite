@@ -6,7 +6,7 @@ I created this website project to improve my web development skills and display 
 
 Feel free to check out how I implemented my portfolio website!
 
-<p align="center"><img src="/GitHub Readme Data/Website Home Page.png" style="width: 75%" /></p>
+<p align="center"><img src="/GitHub Readme Data/Website Home Page.png" style="width: 90%" /></p>
 <p align="center"><b>Figure 1:</b> The home page features two containers that allow the user to visit the 'Projects' or 'About' pages.</p>
 
 ## Lessons Learned
