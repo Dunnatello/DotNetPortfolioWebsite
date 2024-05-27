@@ -6,6 +6,9 @@ I created this website project to improve my web development skills and display 
 
 Feel free to check out how I implemented my portfolio website!
 
+<p align="center"><img src="/GitHub Readme Data/Website Home Page.png" style="width: 75%" /></p>
+<p align="center"><b>Figure 1:</b> The home page features two containers that allow the user to visit the 'Projects' or 'About' pages.</p>
+
 ## Lessons Learned
 While working on this project, I learned about how ASP.NET Core websites function and developed my own website using the framework. Additionally, I learned how to use the Microsoft Azure Cloud platform to host the website.
 
